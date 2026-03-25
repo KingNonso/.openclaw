@@ -1,0 +1,136 @@
+# OpenClaw backup-safe .gitignore
+# Goal: keep config/docs/workspace metadata visible for private backup,
+# while excluding secrets, credentials, transient runtime state, logs,
+# caches, sandboxes, generated media, and bulky project artifacts.
+
+# ------------------------------
+# Secrets and environment files
+# ------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+*.env
+*.local
+*.secret
+*.secrets
+*.token
+*.key
+*.pem
+*.p12
+*.pfx
+*.der
+*.crt
+*.csr
+*.jks
+*.keystore
+
+# Secret-like filenames
+**/*token*
+**/*secret*
+**/*credential*
+**/*api*key*
+**/*oauth*
+**/*cookie*
+
+# Auth/session-bearing JSON and transcript-style files
+**/*auth*.json
+**/*session*
+*.jsonl
+
+# ------------------------------
+# Sensitive OpenClaw runtime/state
+# ------------------------------
+credentials/
+identity/
+devices/
+media/
+agents/
+sandboxes/
+logs/
+telegram/
+canvas/
+completions/
+cron/
+mission-control/
+openclaw-mission-control
+
+# Internal state/checkpoint files
+workspace-state.json
+update-check.json
+openclaw.json.bak*
+secrets.json
+auth.json
+
+# Memory databases and local DBs
+memory/*.sqlite
+memory/*.sqlite-*
+*.db
+*.sqlite3
+
+# ------------------------------
+# Legacy / internal workspace data
+# ------------------------------
+workspace/memory/
+workspace/MEMORY.md
+memories/
+_archive/
+
+# ------------------------------
+# Build, dependency, and cache noise
+# ------------------------------
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+cache/
+tmp/
+temp/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# ------------------------------
+# Logs and temporary files
+# ------------------------------
+*.log
+*.tmp
+*.temp
+*.pid
+
+# ------------------------------
+# Backup / patch artifacts
+# ------------------------------
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.save
+*.swp.bak
+
+# ------------------------------
+# Editor / IDE files
+# ------------------------------
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# ------------------------------
+# OS / filesystem noise
+# ------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
