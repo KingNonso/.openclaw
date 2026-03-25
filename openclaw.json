@@ -25,7 +25,10 @@
     "enabled": true,
     "backend": "acpx",
     "defaultAgent": "claude",
-    "allowedAgents": ["claude", "claude-gstack"],
+    "allowedAgents": [
+      "claude",
+      "claude-gstack"
+    ],
     "runtime": {
       "ttlMinutes": 120
     }
@@ -52,7 +55,7 @@
         "openai/o4-mini": {},
         "openai/gpt-4.1-mini": {}
       },
-      "workspace": "/Users/nonso/openclaw-workspace",
+      "workspace": "/Users/nonso/.openclaw/workspace",
       "sandbox": {
         "mode": "off"
       }
@@ -188,14 +191,6 @@
         "config": {
           "permissionMode": "approve-all",
           "nonInteractivePermissions": "deny"
-        }
-      },
-      "perplexity": {
-        "enabled": true,
-        "config": {
-          "webSearch": {
-            "apiKey": "${PERPLEXITY_API_KEY}"
-          }
         }
       }
     }
