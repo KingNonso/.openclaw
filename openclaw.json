@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.23-2",
-    "lastTouchedAt": "2026-03-25T18:41:48.221Z"
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-25T19:54:48.667Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-21T17:00:50.182Z",
@@ -25,10 +25,7 @@
     "enabled": true,
     "backend": "acpx",
     "defaultAgent": "claude",
-    "allowedAgents": [
-      "claude",
-      "claude-gstack"
-    ],
+    "allowedAgents": ["claude", "claude-gstack"],
     "runtime": {
       "ttlMinutes": 120
     }
@@ -125,6 +122,7 @@
     "telegram": {
       "enabled": true,
       "dmPolicy": "pairing",
+      "allowFrom": ["283526602"],
       "groupPolicy": "allowlist",
       "streaming": "partial"
     },
